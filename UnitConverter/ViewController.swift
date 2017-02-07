@@ -27,9 +27,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 	func loadUnits() {
 		let filepath = Bundle.main.path(forResource: "Length", ofType: "plist")
 		unitConversions = NSDictionary(contentsOfFile: filepath!) as! Dictionary<String, Float>
-		for item in unitConversions {
+		let sortedUnits = unitConversions.sorted(by: sortUnits)
+		for item in sortedUnits {
 			units.append(item.key)
 		}
+	}
+	
+	func sortUnits(first: (key: String, value: Float), second: (key: String, value: Float)) -> Bool {
+		return first.value > second.value
 	}
 
 	func numberOfComponents(in pickerView: UIPickerView) -> Int {

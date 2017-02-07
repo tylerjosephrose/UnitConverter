@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kilometer</key>
+	<integer>1000</integer>
+	<key>Meter</key>
+	<integer>1</integer>
+	<key>Centimeter</key>
+	<real>0.01</real>
+	<key>Millimeter</key>
+	<real>0.001</real>
+	<key>Mile</key>
+	<real>1609.34</real>
+	<key>Yard</key>
+	<real>0.9144</real>
+	<key>Foot</key>
+	<real>0.3048</real>
+	<key>Inch</key>
+	<real>0.0254</real>
+</dict>
+</plist>

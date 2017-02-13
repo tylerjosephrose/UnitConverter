@@ -26,10 +26,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 	@IBOutlet weak var fromPicker: UIPickerView!
 	@IBOutlet weak var toPicker: UIPickerView!
 	
-	@IBAction func convertPressed(_ sender: UIButton) {
-		convertUnits()
-	}
-	
 	func updateDisplay() {
 		unitsLabel.text = units[toPicker.selectedRow(inComponent: 0)]
 		outputLabel.text = String(convertedAmount)
@@ -92,6 +88,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
 		return units[row]
 	}
+	
+	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+		convertUnits()
+	}
 
+	@IBAction func tappedSomewhere(_ sender: UITapGestureRecognizer) {
+		convertUnits()
+	}
 }
 

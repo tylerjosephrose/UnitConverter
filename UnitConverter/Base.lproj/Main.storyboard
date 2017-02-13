@@ -72,17 +72,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPh-u3-Zb6">
-                                <rect key="frame" x="145" y="250" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Convert"/>
-                                <connections>
-                                    <action selector="convertPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lIU-70-eRv"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="n6f-Eo-cKe" appends="YES" id="P8q-wz-Uxw"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="fromPicker" destination="P6F-s3-G1a" id="oyG-RI-YUd"/>
@@ -93,6 +88,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="n6f-Eo-cKe">
+                    <connections>
+                        <action selector="tappedSomewhere:" destination="BYZ-38-t0r" id="S4D-oj-78a"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
